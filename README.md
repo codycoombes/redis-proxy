@@ -23,8 +23,7 @@ Redis “GET” command mapped to the HTTP “GET” method.
 * Once the cache fills to capacity, the least recently used (LRU) key is evicted each time a new key needs to be added to the cache.
 * Configurable through the environment variables `CAPACITY` and `GLOBAL_EXPIRY`.
 ### Redis
-* Each instance of the proxy service is associated with a single
-      Redis service instance called the “backing Redis”. 
+* Each instance of the proxy service is associated with a single Redis service instance. 
 * The address of the backing Redis is configured at proxy startup
   through environment variables `REDIS_HOST` and `REDIS_PORT`.
 ### Black-box testing
