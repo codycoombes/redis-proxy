@@ -64,7 +64,7 @@ lru-expiring-cache (https://pypi.org/project/lru-expiring-cache/) is thread-safe
 creating a new instance.
 
 ## Complexity
-lru-expiring-cache has O(n) get and O(1) set \
+lru-expiring-cache has O(n) get and O(1) set.\
 I went with this library because it was thread-safe but if I had more time I would have gone with a cache library that had O(1) retrieval like cachetools (https://cachetools.readthedocs.io/en/latest/) and manually synchronize access to the methods or implement my own LRU cache using a dictionary (hashmap). 
 
 ## Time spent
