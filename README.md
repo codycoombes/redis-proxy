@@ -1,6 +1,6 @@
 # redis-proxy
 ## About
-Redis proxy is an LRU caching layer to a single Redis backed service instance.
+Redis proxy is an LRU caching layer to a single Redis backed service instance powered by Flask.
 
 ### Features
 * Users can interface to the Redis proxy through HTTP, with the
