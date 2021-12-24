@@ -1,0 +1,26 @@
+version: '3'
+services:
+  redis:
+    image: redis:alpine
+    ports:
+      - '6379'
+  proxy:
+    build: .
+    ports:
+      - '5000:5000'
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - CAPACITY=3
+      - GLOBAL_EXPIRY=5
+  proxy-test:
+    build: ./redis-proxy-test
+    depends_on:
+      - redis
+      - proxy
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - GLOBAL_EXPIRY=5
