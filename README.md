@@ -32,7 +32,6 @@ Redis “GET” command mapped to the HTTP “GET” method.
 makes requests. This is configurable through the environment variables but requires a specific configuration to pass tests. 
 
 ## How to use
-### Setup
 This project requires `make`, `docker`, and `docker-compose`. 
 
 To build and run the proxy, redis, and test containers: 
